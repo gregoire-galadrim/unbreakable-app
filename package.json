@@ -1,0 +1,22 @@
+{
+  "name": "unstoppable-product",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A suspiciously reliable product landing page.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:restart": "pm2 restart ecosystem.config.js --update-env",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "pm2:logs": "pm2 logs unstoppable"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.2.0",
+    "pm2": "^6.0.14"
+  }
+}

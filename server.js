@@ -11,7 +11,7 @@ app.get("/api/health", (_request, response) => {
 app.use(express.static(path.join(__dirname, "public")));
 
 if (require.main === module) {
-  const server = app.listen(process.env.PORT || 3000, (error) => {
+  const server = app.listen(process.env.PORT || 3000, "0.0.0.0", (error) => {
     if (error) {
       console.error(`Unstoppable could not start: ${error.message}`);
       process.exitCode = 1;
